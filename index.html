@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>الملف الشخصي</title>
+    <meta
+      name="description"
+      content="بطاقة تعريف رقمية — تواصل مباشر عبر الهاتف، واتساب والبريد الإلكتروني."
+    />
+
+    <!-- Social share preview (fixes bare-link previews when the URL is shared) -->
+    <meta property="og:title" content="الملف الشخصي" />
+    <meta
+      property="og:description"
+      content="بطاقة تعريف رقمية — تواصل مباشر عبر الهاتف، واتساب والبريد الإلكتروني."
+    />
+    <meta property="og:type" content="profile" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main class="profile-container">
+      <section class="profile-card">
+        <div class="profile-image">
+          <img
+            id="profileImage"
+            src="assets/image/img-profile.jpg"
+            alt="صورة الملف الشخصي"
+          />
+        </div>
+
+        <h1 id="clientName">جاري التحميل...</h1>
+
+        <p id="clientDescription" class="description"></p>
+
+        <div class="contact-list">
+          <a id="phoneLink" class="contact-item" href="#">
+            <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+            <span>
+              <small>الهاتف</small>
+              <strong id="phoneNumber" dir="ltr">---</strong>
+            </span>
+          </a>
+
+          <a id="whatsappLink" class="contact-item" href="#" target="_blank">
+            <span class="contact-icon"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></span>
+            <span>
+              <small>واتساب</small>
+              <strong id="whatsappNumber" dir="ltr">---</strong>
+            </span>
+          </a>
+
+          <a id="emailLink" class="contact-item" href="#">
+            <span class="contact-icon"
+              ><i class="fa-regular fa-envelope"></i
+            ></span>
+            <span>
+              <small>البريد الإلكتروني</small>
+              <strong id="emailAddress" dir="ltr">---</strong>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <footer class="profile-footer">
+        <p>هل تريد ملفًا شخصيًا مثل هذا؟</p>
+
+        <a href="register.html" class="create-link">أنشئ ملفك الشخصي</a>
+      </footer>
+    </main>
+
+    <script src="js/profile.js"></script>
+  </body>
+</html>
