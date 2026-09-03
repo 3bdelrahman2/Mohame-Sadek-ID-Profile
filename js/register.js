@@ -6,7 +6,7 @@ const submitButton = registerForm.querySelector(".submit-button");
 const ADMIN_WHATSAPP = "201068480441";
 
 const PHONE_PATTERN = /^\+?[0-9\s-]{8,15}$/;
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function setStatus(message, type) {
   formStatus.textContent = message;
@@ -30,15 +30,15 @@ registerForm.addEventListener("submit", (event) => {
     return;
   }
 
-  if (!PHONE_PATTERN.test(phone) || !PHONE_PATTERN.test(whatsapp)) {
-    setStatus("يرجى إدخال رقم هاتف صحيح.", "error");
-    return;
-  }
+  // if (!PHONE_PATTERN.test(phone) || !PHONE_PATTERN.test(whatsapp)) {
+  //   setStatus("يرجى إدخال رقم هاتف صحيح.", "error");
+  //   return;
+  // }
 
-  if (!EMAIL_PATTERN.test(email)) {
-    setStatus("يرجى إدخال بريد إلكتروني صحيح.", "error");
-    return;
-  }
+  // if (!EMAIL_PATTERN.test(email)) {
+  //   setStatus("يرجى إدخال بريد إلكتروني صحيح.", "error");
+  //   return;
+  // }
 
   const message = `مرحبًا، أريد إنشاء ملف شخصي رقمي.
 
