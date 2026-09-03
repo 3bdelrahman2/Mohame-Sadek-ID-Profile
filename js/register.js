@@ -21,9 +21,18 @@ registerForm.addEventListener("submit", (event) => {
   const name = (formData.get("name") || "").trim();
   const phone = (formData.get("phone") || "").trim();
   const whatsapp = (formData.get("whatsapp") || "").trim();
+  const emergencyNumber = (formData.get("emergencyNumber") || "").trim();
+  const mechanicNumber = (formData.get("mechanicNumber") || "").trim();
   const email = (formData.get("email") || "").trim();
 
-  if (!name || !phone || !whatsapp || !email) {
+  if (
+    !name ||
+    !phone ||
+    !whatsapp ||
+    !emergencyNumber ||
+    !mechanicNumber ||
+    !email
+  ) {
     setStatus("يرجى تعبئة جميع الحقول.", "error");
     return;
   }
@@ -43,6 +52,8 @@ registerForm.addEventListener("submit", (event) => {
 الاسم: ${name}
 الهاتف: ${phone}
 واتساب: ${whatsapp}
+رقم الطوارئ: ${emergencyNumber}
+رقم الميكانيكي: ${mechanicNumber}
 البريد الإلكتروني: ${email}
 
 أرغب في إنشاء ملف شخصي مشابه.`;
@@ -56,10 +67,7 @@ registerForm.addEventListener("submit", (event) => {
   // Popup blockers or in-app browsers sometimes silently block window.open.
   // Give the visitor a manual way out instead of a request that vanishes.
   if (!opened || opened.closed) {
-    setStatus(
-      "تعذر فتح واتساب تلقائيًا. اضغط هنا لإرسال طلبك.",
-      "error",
-    );
+    setStatus("تعذر فتح واتساب تلقائيًا. اضغط هنا لإرسال طلبك.", "error");
 
     const manualLink = document.createElement("a");
     manualLink.href = whatsappURL;

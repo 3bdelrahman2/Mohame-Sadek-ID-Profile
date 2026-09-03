@@ -21,8 +21,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.getElementById("phoneNumber").textContent = client.phone || "—";
     document.getElementById("whatsappNumber").textContent =
-      client.whatsapp || "—";
+    client.whatsapp || "—";
     document.getElementById("emailAddress").textContent = client.email || "—";
+    document.getElementById("emergencyNumber").textContent = client.emergencyNumber || "—";
+    document.getElementById("mechanicNumber").textContent = client.mechanicNumber || "—";
 
     // Profile image (falls back to whatever is already in the src attribute
     // if not provided, instead of pointing at "undefined")
