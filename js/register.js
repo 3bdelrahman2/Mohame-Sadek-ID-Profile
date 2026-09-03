@@ -25,15 +25,8 @@ registerForm.addEventListener("submit", (event) => {
   const mechanicNumber = (formData.get("mechanicNumber") || "").trim();
   const email = (formData.get("email") || "").trim();
 
-  if (
-    !name ||
-    !phone ||
-    !whatsapp ||
-    !emergencyNumber ||
-    !mechanicNumber ||
-    !email
-  ) {
-    setStatus("يرجى تعبئة جميع الحقول.", "error");
+  if (!name || !phone || !whatsapp || !emergencyNumber) {
+    setStatus("يرجى تعبئة البيانات الأساسية.", "error");
     return;
   }
 
