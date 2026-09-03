@@ -64,6 +64,31 @@
           </div>
 
           <div class="form-group">
+            <label for="emergencyNumber">رقم الطوارئ</label>
+            <input
+              type="tel"
+              id="emergencyNumber"
+              name="emergencyNumber"
+              dir="ltr"
+              placeholder="01xxxxxxxxx"
+              pattern="^\+?[0-9\s-]{8,15}$"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="mechanicNumber">رقم الميكانيكي</label>
+            <input
+              type="tel"
+              id="mechanicNumber"
+              name="mechanicNumber"
+              dir="ltr"
+              placeholder="01xxxxxxxxx"
+              pattern="^\+?[0-9\s-]{8,15}$"
+            />
+          </div>
+
+          <div class="form-group">
             <label for="email">البريد الإلكتروني</label>
             <input
               type="email"
@@ -80,7 +105,7 @@
           <p id="formStatus" class="form-status" role="status"></p>
         </form>
 
-        <a href="index.html" class="back-link">→ العودة للملف الشخصي</a>
+        <a href="index.html" class="back-link">-- العودة للملف الشخصي --</a>
       </section>
     </main>
 
