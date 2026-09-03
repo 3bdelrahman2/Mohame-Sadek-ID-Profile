@@ -17,6 +17,18 @@
   --accent: #ffffff;
   --danger: #ff6b6b;
 }
+/* :root {
+  --background: #171717;
+  --surface: #202020;
+  --surface-hover: #171717;
+  --border: #202020;
+
+  --text: #f2f4f4;
+  --muted: #8f9999;
+
+  --accent: #ffffff;
+  --danger: #f15725;
+} */
 
 body {
   min-height: 100vh;
@@ -106,22 +118,17 @@ textarea {
 }
 
 .contact-item {
+  min-width: 0;
   display: flex;
   align-items: center;
   gap: 15px;
-
   padding: 16px;
-
   color: var(--text);
   text-decoration: none;
-
   background: #0f1313;
-
   border: 1px solid var(--border);
   border-radius: 16px;
-
   text-align: start;
-
   transition:
     background 0.2s ease,
     transform 0.2s ease;
@@ -156,9 +163,19 @@ textarea {
   color: var(--muted);
 }
 
+.contact-item span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .contact-item strong {
   font-size: 15px;
   unicode-bidi: plaintext;
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .profile-footer {
