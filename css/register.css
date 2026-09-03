@@ -10,6 +10,10 @@ textarea {
   outline: none;
 }
 
+.required {
+  color: #ff5e5e;
+}
+
 .register-container {
   width: 100%;
   max-width: 520px;
